@@ -1,0 +1,14 @@
+.signature{
+    border-left: 2px;
+    border-left:#00a7dd solid;
+    margin-left: 2px;
+    text-emphasis-style: italic;
+    text-decoration-color: aqua;
+}
+.carousel-inner img{
+	width:150px;
+	height: 150px;
+	border-radius: 100%;
+	border:2px solid #00a7dd;
+	padding:3px;
+}

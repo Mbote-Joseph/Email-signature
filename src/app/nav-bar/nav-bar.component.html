@@ -1,0 +1,14 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+        <img src="../../assets/cms.png" alt="" width="50px">
+        <button mat-button routerLink=''>CMSHosting</button>
+        
+        <span class="spacer"></span>
+        <button (click)="auth.signOut()">Logout</button>
+        <button mat-button routerLink='/'>Home</button>
+        <button mat-button routerLink='/user-list'>View</button>
+        <button mat-button routerLink='/template'>Template</button>
+        <button mat-button routerLink='/login' >Login</button>
+        <button mat-button routerLink='/register'>Register</button>
+    </mat-toolbar-row>
+</mat-toolbar>

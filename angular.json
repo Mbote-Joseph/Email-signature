@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "cmshosting"
+    }
+  },
+  "defaultProject": "cmshosting",
+  "cli": {
+    "analytics": "625674d8-ed7c-4ef1-b531-30828b32fefb"
+  }
 }

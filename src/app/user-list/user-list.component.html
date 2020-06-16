@@ -1,0 +1,52 @@
+<div class="col-md-9">
+<form class="form-inline">
+    <input class="form-control" name="searchInput" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 80%;">
+    <button class="btn btn-outline-primary" (click)="searchText=''">Search</button>
+  </form>
+  <table class="table table-sm table-bordered" >
+    <thead>
+      <th>Full Name</th>
+      <th>Company</th>
+      <th>Position</th>
+      <th>Department</th>
+      <th>Phone</th>
+      <th>Mobile</th>
+      <th>Website</th>
+      <th>Skype</th>
+      <th>Email</th>
+      <th>Address</th>
+      <th>Edit</th>
+      <th>Delete</th>
+      
+    </thead>
+    <ng-container *ngFor="let user of userArray">
+      <tr class="table table-striped " *ngIf="filterCondition(user)">
+        <td>{{user.fullName}}</td>
+        <td>{{user.company}} </td>
+        <td>{{user.position}} </td>
+        <td>{{user.department}}</td>
+        <td>{{user.phone}} </td>
+        <td>{{user.mobile}} </td>
+        <td>{{user.website}} </td>
+        <td>{{user.skype}} </td>
+        <td>{{user.email}}</td>
+          <td>{{ user.address}}</td>
+
+          <td>
+            <button class="btn btn-outline-info" routerLink="/register" (click)="userService.populateForm(user)">Edit</button>
+            
+           </td> <td>
+            <button class="btn btn-outline-danger" (click)="onDelete(user.$key)">Delete</button>
+          </td>
+      </tr>
+    </ng-container>
+  </table>
+  <div class="alert alert-danger" *ngIf="showDeletedMessage">
+    Deleted successfully.
+  </div>
+</div>
+<div>
+    <h1>CMSHosting</h1>
+<img src="../assets/cms.png" alt="">
+
+</div>

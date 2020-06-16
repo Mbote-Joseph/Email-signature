@@ -1,0 +1,98 @@
+
+<div class="medium-list" class="col-md-4">
+<div class="list-viewer-wrapper">
+    <div class="list-header-title"><h2>Register</h2></div>
+<div >
+    <div class="col-md-12">
+      <form [formGroup]="this.userService.form" (ngSubmit)="onSubmit()">
+        <input type="hidden" formControlName="$key">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input formControlName="fullName"  placeholder="Enter your name" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">
+            This field is required.</div>
+        </div>
+        <div class="form-group">
+            <label>Company</label>
+            <input formControlName="company"  placeholder="Enter your company name" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
+            <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">
+              This field is required.</div>
+          </div>
+          <div class="form-group">
+            <label>Position</label>
+            <input formControlName="position"  placeholder="Enter your Current Position" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
+            <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">
+              This field is required.</div>
+          </div>
+          <div class="form-group">
+            <label>Department</label>
+            <input formControlName="department"  placeholder="Enter your Department" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.fullName.errors}">
+            <div class="invalid-feedback" *ngIf="submitted && formControls.fullName.errors">
+              This field is required.</div>
+          </div>
+          <div class="form-group">
+            <label>Phone</label>
+            <input formControlName="phone"  placeholder="Enter your Phone Number" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.mobile.errors}">
+            <div class="invalid-feedback" *ngIf="submitted && formControls.mobile.errors">
+              <label *ngIf="formControls.mobile.errors.required">This field is required.</label>
+              <label *ngIf="formControls.mobile.errors.minlength">Atleast 8 numbers.</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Mobile</label>
+            <input formControlName="mobile"  placeholder="Enter your Mobile Number" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.mobile.errors}">
+            <div class="invalid-feedback" *ngIf="submitted && formControls.mobile.errors">
+              <label *ngIf="formControls.mobile.errors.required">This field is required.</label>
+              <label *ngIf="formControls.mobile.errors.minlength">Atleast 8 numbers.</label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Website</label>
+            <input formControlName="website" placeholder="Enter your Website link" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Skype</label>
+            <input formControlName="skype" placeholder="Enter your Skype link" class="form-control">
+          </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input formControlName="email"  placeholder="Enter your Email" class="form-control" [ngClass]="{'is-invalid':submitted && formControls.email.errors}">
+          <div class="invalid-feedback" *ngIf="submitted && formControls.email.errors">
+            Invalid email address.</div>
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input formControlName="password" type="password" placeholder="Enter your Password" class="form-control">
+          </div>
+       
+        
+        <div class="form-group">
+            <label>Address</label>
+            <input formControlName="address" placeholder="Enter your Address" class="form-control">
+          </div>
+          <!-- <div class="form-group">
+            <input type="file" class="btn btn-success" (change)="onFileSelected($event)" value="Upload Image" >
+          </div> -->
+          <!-- <button type="button" class="btn btn-success" (click)="onUpload">Upload</button> -->
+          
+        <div class="form-group">
+          <input type="submit" class="btn btn-primary" value="Submit" >
+        </div>
+      </form>
+      <div class="alert alert-info"  *ngIf="showSuccessMessage">
+        Submitted successfully.
+      </div>
+    </div>
+    
+    <!-- <div class="col-md-7"> -->
+      
+    </div>
+  </div>
+  
+  </div>
+  <!-- </div> -->
+<br><br>
+  
+  <app-email-signature></app-email-signature>
+  
+ 
