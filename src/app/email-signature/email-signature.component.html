@@ -27,13 +27,16 @@
                      <ng-container *ngFor="let user of userArray">
                          <tr class="table table-striped " *ngIf="filterCondition(user)">
                              <div class="signature">
-                           <b> Name:</b>{{user.fullName}} <br>
-                           <b> Position:</b>{{user.position}} 
-                           <b> Department:</b>{{user.department}} <br>
-                           <b> Address: </b>{{user.address}} <br>
-                           <b>Email:</b>{{user.email}}<br>
-                           <b>Phone:</b>{{user.phone}}
-                           <b>Mobile</b>{{user.mobile}} <br>
+                              <b> Name:</b>{{user.fullName}} <br>
+                              <b>Company:</b>{{user.company}} <br>
+                              <b> Position:</b>{{user.position}} 
+                              <b> Department:</b>{{user.department}} <br>
+                              <b>Email:</b>{{user.email}}<br>
+                              <b>Phone:</b>{{user.phone}}
+                              <b>Mobile:</b>{{user.mobile}} <br>
+                              <b>Website:</b>{{user.website}}
+                              <b>Skype:</b>{{user.skype}}<br>
+                              <b> Address: </b>{{user.address}} <br>
                            <div class="team-social-network">
                             <a href=""><i class="fa fa-facebook"></i></a>
                             <a href=""><i class="fa fa-twitter"></i></a>
@@ -53,7 +56,7 @@
       </div>
 </div>
 
-
+<br><br><br><br>
 
     <div class="medium-list" class="col-md-8">
         <div class="list-viewer-wrapper">
@@ -83,19 +86,21 @@
                          <tr class="table table-striped " *ngIf="filterCondition(user)">
                              <div class="signature">
                            <b> Name:</b>{{user.fullName}} <br>
+                           <b>Company:</b>{{user.company}}
                            <b> Position:</b>{{user.position}} 
                            <b> Department:</b>{{user.department}} <br>
-                           <b> Address: </b>{{user.address}} <br>
                            <b>Email:</b>{{user.email}}<br>
                            <b>Phone:</b>{{user.phone}}
-                           <b>Mobile</b>{{user.mobile}} <br>
+                           <b>Mobile:</b>{{user.mobile}} <br>
+                           <b>Website:</b>{{user.website}}
+                           <b>Skype:</b>{{user.skype}} <br>
+                           <b> Address: </b>{{user.address}} <br>
                            <div class="team-social-network">
                             <a href=""><i class="fa fa-facebook"></i></a>
                             <a href=""><i class="fa fa-twitter"></i></a>
                             <a href=""><i class="fa fa-linkedin"></i></a>
                           </div>
-
-                          
+                         
          
                          </div>
                      </tr>
